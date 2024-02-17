@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to right, rgb(199, 199, 199), rgb(65, 45, 32));
+}
+
+a:link {
+    color: #f59609;
+}
+
+a:visited {
+    color: #eed810;
+}
+
+a:hover {
+    color: #af5409e8;
+}
+
+a:active {
+    color: #f04d0c;
+}

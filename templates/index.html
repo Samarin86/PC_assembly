@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Budget PC{% endblock %}
+{% block content %}
+  
+    <div class="container">
+        <h2>Block Computers</h2>
+        {% for computer in computers %}
+        <div class="row p-3 m-3">
+            <div class="col-md-2">
+                <a href={% url "pc:single_computer" computer.id %}><img src="{{ computer.image.url }}" alt="Image" width="90%"></a>
+            </div>
+            <div class="col-md-8">
+                <h4><a href={% url "pc:single_computer" computer.id %}>{{ computer.title }}</a></h4>               
+                {{ computer.price|floatformat:0 }}₽<br>
+                <p>{{ computer.configuration }}</p>
+                
+                <td><button class="btn btn-primary" type="">Купить</button></td><br>
+            </div> 
+        </div>          
+        {% endfor %}    
+    </div>
+
+{%endblock%}
+</html>

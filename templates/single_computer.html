@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ computer.title }}{% endblock %}
+{% block content %}
+    
+    <div class="container">
+        <h2>Block Computers</h2>
+        <div class="row p-3 m-3">
+            <div class="col-md-2">
+            <img src= "{{computer.image.url}}" alt="Image" width="90%">
+            </div>
+            <div class="col-md-8">
+                <h3 class="mt-5">{{ computer.title }}</h3>                  
+                {{ computer.price|floatformat:0 }}₽<br>
+                {{ computer.category }}<br>
+                <p>Количество: {{ computer.computer_qty }}</p>
+                <p>{{ computer.configuration }}</p>               
+                <td><button class="btn btn-primary" type="">Купить</button></td><br>
+            </div> 
+        </div>          
+    </div>
+
+{% endblock %}
